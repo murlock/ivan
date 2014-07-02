@@ -29,7 +29,7 @@
 
 #include "v2.h"
 
-#define IVAN_VERSION "0.50"
+#define IVAN_VERSION "0.50+"
 
 class item;
 class material;
@@ -559,7 +559,7 @@ cv2 SILHOUETTE_SIZE(48, 64);
 
 #define MAX_PRICE 2147483647L
 
-#define PERMANENT 0xFFFF
+#define PERMANENT -1 /*Marks permanent states. Negative prevents temporary states from becoming permanent.*/
 
 #define MISSED 0
 #define HIT 1
