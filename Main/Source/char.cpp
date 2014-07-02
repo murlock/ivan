@@ -4243,7 +4243,6 @@ void character::DrawPanel(truth AnimationDraw) const
   PrintAttribute("Per", PERCEPTION, PanelPosX, PanelPosY++);
   PrintAttribute("Int", INTELLIGENCE, PanelPosX, PanelPosY++);
   PrintAttribute("Wis", WISDOM, PanelPosX, PanelPosY++);
-  PrintAttribute("Wil", WILL_POWER, PanelPosX, PanelPosY++);
   PrintAttribute("Cha", CHARISMA, PanelPosX, PanelPosY++);
   FONT->Printf(DOUBLE_BUFFER, v2(PanelPosX, PanelPosY++ * 10), WHITE, "Siz  %d", GetSize());
   FONT->Printf(DOUBLE_BUFFER, v2(PanelPosX, PanelPosY++ * 10),
