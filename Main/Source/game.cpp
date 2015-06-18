@@ -15,6 +15,8 @@
 
 #if defined(LINUX) || defined(__DJGPP__)
 #include <sys/stat.h>
+#include <unistd.h>
+#include <fcntl.h>
 #endif
 
 #ifdef WIN32
@@ -2285,7 +2287,17 @@ festring game::GetSaveDir()
 festring game::GetGameDir()
 {
 #ifdef LINUX
-  return DATADIR "/ivan/";
+  static const char* where = NULL;
+  if (!where) {
+    int fddir = open(DATADIR "/ivan/", O_DIRECTORY);
+    if (fddir != -1) {
+      close(fddir);
+      where = DATADIR "/ivan/";
+    } else {
+      where = "./";
+    }
+  }
+  return where;
 #endif
 
 #if defined(WIN32) || defined(__DJGPP__)
