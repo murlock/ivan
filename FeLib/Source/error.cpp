@@ -41,7 +41,7 @@
 /* Shouldn't be initialized here! */
 
 cchar* globalerrorhandler::BugMsg
-= "\n\nPlease send bug report to ivan-users@sourceforge.net\n"
+= "\n\nPlease post bug report to http://www.attnam.com\n"
 "including a brief description of what you did, what version\n"
 "you are running and which kind of system you are using.";
 
